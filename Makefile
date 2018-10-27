@@ -2,9 +2,8 @@ CC=gcc
 CFLAGS=-lWarn -pedantic
 LDFLAGS=-lwiringPi
 
-
 irtester: irtester.o libmyifttt.a
-	$(CC) $(LDFLAGS) irtester.o -L. -lmyfttt -lcurl -o irtester
+	$(CC) $(LDFLAGS) irtester.o -L. -lmyifttt -lcurl -o irtester
 
 irtester.o: irtester.c ifttt.h
 	$(CC) $(CFLAGS) -c -ansi $< 
